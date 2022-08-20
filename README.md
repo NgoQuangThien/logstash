@@ -3,5 +3,5 @@
 ##	Download Logstash
 
 ```
-	sudo bash create_service.sh
+sudo bash create_service.sh
 ```
