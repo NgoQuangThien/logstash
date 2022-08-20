@@ -1,0 +1,31 @@
+- pipeline.id: elasticbeats
+  path.config: /tools/logstash/pipeline/elasticbeats/*.conf
+  pipeline.workers: 1
+  pipeline.batch.size: 125
+  pipeline.batch.delay: 50
+  queue.type: memory
+  dead_letter_queue.enable: false
+
+- pipeline.id: telegraf
+  path.config: /tools/logstash/pipeline/telegraf/*.conf
+  pipeline.workers: 1
+  pipeline.batch.size: 125
+  pipeline.batch.delay: 50
+  queue.type: memory
+  dead_letter_queue.enable: false
+
+- pipeline.id: syslog
+  path.config: /tools/logstash/pipeline/syslog/*.conf
+  pipeline.workers: 1
+  pipeline.batch.size: 125
+  pipeline.batch.delay: 50
+  queue.type: memory
+  dead_letter_queue.enable: false
+
+- pipeline.id: snmp
+  path.config: /tools/logstash/pipeline/snmp/*.conf
+  pipeline.workers: 1
+  pipeline.batch.size: 125
+  pipeline.batch.delay: 50
+  queue.type: memory
+  dead_letter_queue.enable: false
